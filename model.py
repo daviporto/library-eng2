@@ -6,28 +6,15 @@ class Book:
 
     def __init__(self, title: str, price_code: int):
         self._title = title
-        self._price_code = price_code
+        self._price__code = price_code
 
-    @property
-    def title(self) -> str:
-        return self._title
-
-    @property
-    def price_code(self) -> int:
-        return self._price_code
 
 class Rental:
     def __init__(self, book: Book, days_rented: int):
         self._book = book
         self._days_rented = days_rented
 
-    @property
-    def book(self) -> Book:
-        return self._book
 
-    @property
-    def days_rented(self) -> int:
-        return self._days_rented
 
 class Client:
 
@@ -38,9 +25,7 @@ class Client:
     def add_rental(self, rental: Rental):
         self._rentals.append(rental)
 
-    @property
-    def name(self) -> str:
-        return self._name
+
 
     def statement(self) -> str:
 
